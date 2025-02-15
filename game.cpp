@@ -252,7 +252,7 @@ void Game::DrawBordertiles()
 
 void Game::GenerateSlime()
 {
-    idletexture = LoadTexture("Graphics/Slime_idle_spritesheet.png");
+    idletexture = LoadTexture("Graphics/slime_idle_spritesheet.png");
     runtexture = LoadTexture("Graphics/slime_run_spritesheet.png");
 
      for (int i = 0; i < 5; ++i) {  // Add 5 slimes, for example
@@ -265,7 +265,7 @@ void Game::GenerateSlime()
 
 void Game::GenerateSlime2()
 {
-    idletexture = LoadTexture("Graphics/Slime_idle_spritesheet.png");
+    idletexture = LoadTexture("Graphics/slime_idle_spritesheet.png");
     runtexture = LoadTexture("Graphics/slime_run_spritesheet.png");
         for (int i = 0; i < 20; ++i){
             Vector2 slimepos = { static_cast<float>(GetRandomValue(-1000, 1000)), static_cast<float>(GetRandomValue(-1000, 1000)) };
@@ -281,7 +281,7 @@ void Game::GenerateBossSlime()
     bossSlime = std::make_unique<BossSlime>(bossPos, player);  // Assuming bossSlime is a unique_ptr
 
     for (int i = 0; i < 25; ++i){
-            idletexture = LoadTexture("Graphics/Slime_idle_spritesheet.png");
+            idletexture = LoadTexture("Graphics/slime_idle_spritesheet.png");
             runtexture = LoadTexture("Graphics/slime_run_spritesheet.png");
             Vector2 slimepos = { static_cast<float>(GetRandomValue(-1000, 1000)), static_cast<float>(GetRandomValue(-1000, 1000)) };
             Slime newSlime(slimepos, idletexture, runtexture, player);
